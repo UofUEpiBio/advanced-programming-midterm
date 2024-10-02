@@ -1,5 +1,4 @@
-name: Render Website
-
+name: Check whether the files render
 on:
   push:
     branches:
@@ -19,16 +18,24 @@ jobs:
       image: rocker/tidyverse:4.4.0
 
     steps:
+      # Check out the repository (git clone)
       - uses: actions/checkout@v4
 
+      # Setup TinyTeX
+      - name: Setup TinyTeX
+        uses: r-lib/actions/setup-tinytex@v2
+
+      # Install dependencies (R packages)
       - name: Install dependencies
         run: |
           install2.r data.table slurmR
     
+      # Render the slides/report using quarto
       - name: Render ${{ matrix.file }}
         run: |
           quarto render ${{ matrix.file }}.qmd
     
+      # Save the rendered slides/report as an artifact
       - name: Save as artifact
         uses: actions/upload-artifact@v4
         with:

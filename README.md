@@ -1,4 +1,4 @@
-# Template project for Advanced Programming
+# Template project for Advanced Programming [![Slides and report render](../../actions/workflows/check-qmd-render.yaml/badge.svg)](../../actions/workflows/check-qmd-render.yaml)
 
 The template project has the following files:
 

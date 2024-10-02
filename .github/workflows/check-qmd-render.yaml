@@ -21,10 +21,6 @@ jobs:
       # Check out the repository (git clone)
       - uses: actions/checkout@v4
 
-      # Setup TinyTeX
-      - name: Setup TinyTeX
-        uses: r-lib/actions/setup-tinytex@v2
-
       # Install dependencies (R packages)
       - name: Install dependencies
         run: |
@@ -33,7 +29,7 @@ jobs:
       # Render the slides/report using quarto
       - name: Render ${{ matrix.file }}
         run: |
-          quarto render ${{ matrix.file }}.qmd
+          quarto render ${{ matrix.file }}.qmd --to html
     
       # Save the rendered slides/report as an artifact
       - name: Save as artifact

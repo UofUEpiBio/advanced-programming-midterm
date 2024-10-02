@@ -1,0 +1,15 @@
+---
+format: pdf
+author: John Doe
+title: My fancy presentation
+subtitle: For PHS 7045
+---
+
+# Section 1
+
+## Sub-section 1
+
+```{r}
+#| label: some-code
+library(MASS)
+```

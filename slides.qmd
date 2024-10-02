@@ -1,0 +1,18 @@
+---
+title: My fancy presentation
+subtitle: For PHS 7045
+author: John Doe
+format: revealjs
+embed-resources: true
+---
+
+# Section 1
+
+## Slide 1
+
+
+```{r}
+#| label: some-code
+library(MASS)
+
+```

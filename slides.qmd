@@ -14,5 +14,6 @@ embed-resources: true
 ```{r}
 #| label: some-code
 library(MASS)
+library(epiworldR)
 
 ```

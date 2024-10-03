@@ -24,7 +24,7 @@ jobs:
       # Install dependencies (R packages)
       - name: Install dependencies
         run: |
-          install2.r data.table slurmR
+          install2.r data.table slurmR epiworldR
     
       # Render the slides/report using quarto
       - name: Render ${{ matrix.file }}
